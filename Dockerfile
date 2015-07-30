@@ -12,7 +12,7 @@ USER root
 
 RUN apt-get update
 
-RUN apt-get install git openssh-server -y
+RUN apt-get install git openssh-server maven -y
 
 RUN echo "export LC_ALL=C" >> /root/.bashrc                                               
 
