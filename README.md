@@ -28,7 +28,7 @@ docker build -t 192.168.0.240:4000/tomcat .
 Run the activiti image
 
 ```bash
-docker run --name='tomcat' \
+docker run --name='tomcat' -d \
     -p 18888:8080 \
     -p 12228:22 \
     -v /home/docker/docker_data/test/tomcat:/opt/tomcat/webapps \
