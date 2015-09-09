@@ -11,9 +11,8 @@ ENV REFRESHED_AT 2015-09-09 12:00
 USER root
 
 RUN \
-    sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list && \
     apt-get update && \
-    apt-get install git openssh-server -y && \
+    apt-get install git openssh-server -y
 
 RUN echo "export LC_ALL=C" >> /root/.bashrc
 
@@ -21,7 +20,7 @@ RUN echo "export LC_ALL=C" >> /root/.bashrc
 RUN  apt-get install -y supervisor && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
 RUN \
-    apt clean && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 
@@ -70,4 +69,4 @@ RUN cp /assets/config/tomcat/tomcat-users.xml /opt/apache-tomcat-${TOMCAT_VERSIO
 
 WORKDIR /root
 
-CMD ["/assets/init"]
+CMD ["/assets/startup"]
