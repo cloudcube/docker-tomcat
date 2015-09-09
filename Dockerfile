@@ -55,8 +55,6 @@ RUN rm /tmp/catalina.tar.gz
 
 
 # Remove unneeded apps
-RUN mkdir /root/bak
-RUN mv /opt/tomcat/webapps /opt/tomcat/webapps.bak
 RUN mv /opt/tomcat/webapps/host-manager /opt/tomcat/host-manager.bak && \
     mv /opt/tomcat/webapps/manager /opt/tomcat/manager.bak && \
     mv /opt/tomcat/webapps/ROOT /opt/tomcat/ROOT.bak
