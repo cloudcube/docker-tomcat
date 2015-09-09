@@ -31,8 +31,8 @@ Run the activiti image
 docker run --name='tomcat' \
     -p 18888:8080 \
     -p 12228:22 \
-    -v /home/docker/docker_data/test/tomcat:/opt/tomcat/webapps
-192.168.0.240:4000/tomcat
+    -v /home/docker/docker_data/test/tomcat:/opt/tomcat/webapps \
+    192.168.0.240:4000/tomcat
 ```
 
 Point your browser to `http://<ip>:8080/manager` and login using the default username and password:
