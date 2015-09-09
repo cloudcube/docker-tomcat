@@ -12,10 +12,9 @@ sed 's,{{TOMCAT_ADMIN_PASSWORD}},'"${TOMCAT_ADMIN_PASSWORD}"',g' -i /opt/tomcat/
 
 if [ ! -f /opt/tomcat/webapps/isFile ]; then
     touch /opt/tomcat/webapps/isFile
-    cd /opt/tomcat/
-    mv webapps.bak webapps
-    # mv /opt/tomcat/webapps.bak /opt/tomcat/webapps
-    # sleep 50s
+    mv /opt/tomcat/host-manager.bak /opt/tomcat/webapps/host-manager
+    mv /opt/tomcat/manager.bak /opt/tomcat/webapps/manager
+    mv /opt/tomcat/ROOT.bak /opt/tomcat/webapps/ROOT
 fi
 
 exec supervisord -c /etc/supervisor/supervisord.conf
