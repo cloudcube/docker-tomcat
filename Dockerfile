@@ -65,8 +65,11 @@ VOLUME ["/opt/tomcat/webapps"]
 
 # Add roles
 ADD assets /assets
+RUN chmod u+x /assets/startup.sh
+
+
 RUN cp /assets/config/tomcat/tomcat-users.xml /opt/apache-tomcat-${TOMCAT_VERSION}/conf/
 
-WORKDIR /root
+WORKDIR /assets
 
-CMD ["/assets/startup"]
+CMD ["/assets/startup.sh"]
