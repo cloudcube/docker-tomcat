@@ -56,7 +56,7 @@ RUN rm /tmp/catalina.tar.gz
 
 # Remove unneeded apps
 RUN mkdir /root/bak
-RUN mv /opt/tomcat/webapps/* /root/bak/
+RUN mv /opt/tomcat/webapps /opt/tomcat/webapps.bak
 
 # To install jar files first we need to deploy war files manually
 

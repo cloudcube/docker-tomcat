@@ -12,7 +12,7 @@ cd /opt/tomcat/webapps
 
 if [ ! -f /opt/tomcat/webapps/isFile ]; then
     touch /opt/tomcat/webapps/isFile
-    mv /root/bak/* /opt/tomcat/webapps/
+    mv /opt/tomcat/webapps.bak /opt/tomcat/webapps
     sleep 50s
 fi
 
