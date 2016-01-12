@@ -52,7 +52,7 @@ RUN wget http://archive.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/a
 RUN tar xzf /tmp/catalina.tar.gz -C /opt
 RUN ln -s /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat
 RUN rm /tmp/catalina.tar.gz
-
+ADD config/supervisor-wrapper.sh /opt/tomcat/bin/supervisor-wrapper.sh
 
 # Remove unneeded apps
 RUN mv /opt/tomcat/webapps/host-manager /opt/tomcat/host-manager.bak && \
