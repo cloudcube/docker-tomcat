@@ -1,5 +1,5 @@
 #
-# Ubuntu 14.04 with activiti Dockerfile
+# Ubuntu 14.04 with Tomcat Dockerfile
 #
 # Pull base image.
 FROM java:8
