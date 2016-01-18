@@ -17,7 +17,7 @@ RUN \
 RUN echo "export LC_ALL=C" >> /root/.bashrc
 
 # Install Supervisor.
-RUN  apt-get install -y supervisor && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
+RUN  apt-get install fonts-arphic-ukai supervisor -y && sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisor/supervisord.conf
 
 RUN \
     apt-get clean && \
